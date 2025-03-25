@@ -1,4 +1,4 @@
- def get_order_details():
+def get_order_details():
     # TODO(Keith): Gather product name, price, and quantity in a list. 
     details = []
     while True:
