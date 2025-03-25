@@ -39,9 +39,21 @@ def calculate_total(details, is_senior):
     grand_total = sum(order['total'] for order in details)
     return grand_total * 0.9 if is_senior else grand_total
 
-
-# TODO: Display items, customer name, senior ID (if any), and total amount.  
-# Assigned to: Mikee  
+def display_summary(order_list, customer_info, grand_total):
+    # TODO(Mikee): Show order details, customer info, and total.
+    print("\n---- ORDER RECEIPT ----")
+   
+    for order in order_list:
+        print(
+            f"Product: {order['product_name']} | Price: P{order['price']:.2f} "
+            f"| Qty: {order['quantity']} | Total: P{order['total']:.2f}"
+        )
+   
+    print("\nCustomer:", customer_info["name"])
+    if customer_info["is_senior"]:
+        print(f"Senior ID: {customer_info['senior_id']}")
+    
+    print(f"Grand Total: P{grand_total:.2f}")
 
 # TODO: Integrate and execute all functions in the main program.  
 # Assigned to: Kalelle  
