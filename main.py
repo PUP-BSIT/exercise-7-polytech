@@ -34,8 +34,11 @@ def get_customer_info():
 
     return customer_info 
 
-# TODO: Compute total cost of items, applying senior citizen discount if needed.  
-# Assigned to: Zyra  
+def calculate_total(details, is_senior):
+    # TODO(Zyra): Compute total and apply senior discount.
+    grand_total = sum(order['total'] for order in details)
+    return grand_total * 0.9 if is_senior else grand_total
+
 
 # TODO: Display items, customer name, senior ID (if any), and total amount.  
 # Assigned to: Mikee  
