@@ -42,3 +42,10 @@ def get_customer_info():
 
 # TODO: Integrate and execute all functions in the main program.  
 # Assigned to: Kalelle  
+
+def main():
+    order_list = get_order_details()
+    customer_info = get_customer_info()
+
+if __name__ == "__main__":
+    main()
