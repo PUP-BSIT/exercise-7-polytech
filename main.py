@@ -19,8 +19,20 @@ def get_order_details():
             break
     return details
 
-# TODO: Collect customer details and check if they are a senior citizen.  
-# Assigned to: Annie  
+def get_customer_info():
+    # TODO(Annie): Collect name and check if senior citizen.
+    name = input("Enter your name: ")
+    is_senior = input("Are you a senior citizen? (y/n): ").strip().lower()
+
+    customer_info = {
+        "name": name,
+        "is_senior": is_senior in ['yes', 'y']
+    }
+
+    if customer_info["is_senior"]:
+        customer_info["senior_id"] = input("Enter senior ID: ")
+
+    return customer_info 
 
 # TODO: Compute total cost of items, applying senior citizen discount if needed.  
 # Assigned to: Zyra  
