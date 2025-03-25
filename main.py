@@ -55,12 +55,12 @@ def display_summary(order_list, customer_info, grand_total):
     
     print(f"Grand Total: P{grand_total:.2f}")
 
-# TODO: Integrate and execute all functions in the main program.  
-# Assigned to: Kalelle  
-
 def main():
+# TODO(Kalelle): Integrate and execute all functions in the main program.  
     order_list = get_order_details()
     customer_info = get_customer_info()
+    grand_total = calculate_total(order_list, customer_info["is_senior"])
+    display_summary(order_list, customer_info, grand_total)
 
 if __name__ == "__main__":
     main()
